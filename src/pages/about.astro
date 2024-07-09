@@ -1,0 +1,18 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import InteriorPageBanner from '~/components/shared/InteriorPageBanner.astro';
+import AboutTheTeam from '~/components/about/AboutTheTeam.astro';
+import SideBySide from '~/components/about/SideBySide.astro';
+import AboutTheProcess from '~/components/about/AboutTheProcess.astro';
+---
+
+<Layout title="About" description="A description of the website.">
+  <InteriorPageBanner
+    topper="Building Communities"
+    title="About"
+    page="About"
+  />
+  <SideBySide />
+  <AboutTheTeam />
+  <AboutTheProcess />
+</Layout>

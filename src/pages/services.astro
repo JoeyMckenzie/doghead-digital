@@ -1,0 +1,18 @@
+---
+import Layout from '~/layouts/Layout.astro';
+import InteriorPageBanner from '~/components/shared/InteriorPageBanner.astro';
+import WhatWeDo from '~/components/services/WhatWeDo.astro';
+import LighthouseScores from '~/components/services/LighthouseScores.astro';
+import Pricing from '~/components/home/Pricing.astro';
+---
+
+<Layout title="Services" description="A description of the website.">
+  <InteriorPageBanner
+    topper="Building Communities"
+    title="What we do"
+    page="Services"
+  />
+  <WhatWeDo />
+  <LighthouseScores />
+  <Pricing />
+</Layout>

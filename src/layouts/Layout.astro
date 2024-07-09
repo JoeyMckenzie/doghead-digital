@@ -1,0 +1,71 @@
+---
+import Navbar from '~/components/Navbar.astro';
+import FooterContactForm from '~/components/shared/FooterContactForm.astro';
+import { Schema } from 'astro-seo-schema';
+import { SEO } from 'astro-seo';
+import config from '~/config';
+
+import '@fontsource/ubuntu';
+
+import '~/styles/theme.scss';
+import '~/styles/dark-mode.scss';
+import '~/styles/fonts.scss';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="description" content="Astro description" /> -->
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <Schema
+      item={{
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        name: config.company,
+        alternateName: config.company,
+        url: config.website,
+        logo: config.logo,
+        email: config.email,
+        knowsAbout: ['Service 1', 'Service 2', 'Service 3'],
+      }}
+    />
+
+    <SEO
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title,
+          type: 'A type.',
+          image:
+            'https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png',
+        },
+      }}
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://api.iconify.design" />
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <FooterContactForm />
+    <script src="~/scripts/navbar.ts"></script>
+    <script src="~/scripts/dark-mode.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+{
+  "name": "astro-codestitch-starter",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
+    "lint:css": "stylelint \"src/**/*.{scss,astro}\"",
+    "fix:css": "stylelint --fix \"src/**/*.{scss,astro}\"",
+    "ci": "pnpm run lint && pnpm run lint:css",
+    "prepare": "git config core.hookspath .githooks"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.8.0",
+    "@astrojs/sitemap": "^3.1.6",
+    "@fontsource/jetbrains-mono": "^5.0.20",
+    "@fontsource/montserrat": "^5.0.18",
+    "@fontsource/open-sans": "^5.0.28",
+    "@fontsource/ubuntu": "^5.0.13",
+    "@fontsource/wittgenstein": "^5.0.1",
+    "@iconify-json/mdi": "^1.1.67",
+    "@iconify-json/ph": "^1.1.13",
+    "astro": "^4.11.5",
+    "astro-icon": "^1.1.0",
+    "astro-robots-txt": "^1.0.0",
+    "astro-seo": "^0.8.4",
+    "astro-seo-schema": "^4.0.2",
+    "sass": "^1.77.6",
+    "schema-dts": "^1.1.2",
+    "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "2.22.0-beta.3",
+    "astro-eslint-parser": "^1.0.2",
+    "eslint": "9.6.0",
+    "eslint-plugin-astro": "^1.2.3",
+    "eslint-plugin-format": "^0.1.2",
+    "lint-staged": "^15.2.7",
+    "postcss": "^8.4.39",
+    "postcss-html": "^1.7.0",
+    "postcss-scss": "^4.0.9",
+    "postscss": "^2.0.0",
+    "prettier-plugin-astro": "^0.14.0",
+    "stylelint": "^16.6.1",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-recommended-scss": "^14.0.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-scss": "^6.3.2"
+  },
+  "lint-staged": {
+    "**/*.{js,mjs,ts,astro}": "pnpm run fix",
+    "**/*.{scss,astro}": "pnpm run fix:css"
+  }
+}
