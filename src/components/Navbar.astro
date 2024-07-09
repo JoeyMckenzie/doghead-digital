@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
 import config from '~/config';
+import Logo from './shared/Logo.astro';
 
 function getActiveClass(route: string) {
   const pathname = new URL(Astro.request.url).pathname;
@@ -35,24 +36,6 @@ function getActiveClass(route: string) {
         </a>
       </div>
       <div class="cs-top-social">
-        <a href={config.socials?.facebook} class="cs-social-link">
-          <Icon
-            class="cs-social-icon"
-            width={12}
-            height={12}
-            name="mdi:facebook"
-            aria-hidden="true"
-          />
-        </a>
-        <a href={config.socials?.twitter} class="cs-social-link">
-          <Icon
-            class="cs-social-icon"
-            width={12}
-            height={12}
-            name="mdi:twitter"
-            aria-hidden="true"
-          />
-        </a>
         <a href={config.socials?.instagram} class="cs-social-link">
           <Icon
             class="cs-social-icon"
@@ -68,14 +51,7 @@ function getActiveClass(route: string) {
   <div class="cs-container">
     <!--Nav Logo-->
     <a href="/" class="cs-logo" aria-label="back to home">
-      <img
-        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/consulting-logo.svg"
-        alt="logo"
-        width="197"
-        height="43"
-        aria-hidden="true"
-        decoding="async"
-      />
+      <Logo />
     </a>
     <!--Navigation List-->
     <nav class="cs-nav" role="navigation">

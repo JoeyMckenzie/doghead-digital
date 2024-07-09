@@ -13,7 +13,7 @@ interface Config {
   };
   tel: string;
   mailto: string;
-  formattedAddress: string;
+  formattedAddress?: string;
   socials?: {
     instagram?: string;
     facebook?: string;
@@ -30,24 +30,14 @@ function defineConfig(config: Config) {
 }
 
 export default defineConfig({
-  company: 'Company',
-  website: 'https://reddit.com',
-  logo: 'https://reddit.com',
-  phone: '(555) 555-5555',
-  email: 'company@email.com',
-  address: {
-    street: '123 Address St.',
-    city: 'Redding',
-    state: 'CA',
-    zipCode: '96003',
-    country: 'U.S.',
-  },
-  tel: 'tel:555-555-5555',
-  mailto: 'mailto:company@email.com',
-  formattedAddress: '123 Address St, Redding, CA 96003',
+  company: 'Doghead Digital',
+  website: 'https://doghead.digital',
+  logo: 'https://doghead.digital/logo.webp',
+  phone: '(530) 356-7734',
+  email: 'info@doghead.digital',
+  tel: 'tel:530-356-7734',
+  mailto: 'mailto:info@doghead.digital',
   socials: {
     instagram: 'https://instagram.com/',
-    facebook: 'https://facebook.com',
-    twitter: 'https://twitter.com',
   },
 });
