@@ -1,3 +1,20 @@
+---
+interface PortfolioProject {
+  title: string;
+  description: string;
+  link: string;
+}
+
+const portfolioProjects: PortfolioProject[] = [
+  {
+    title: 'Modern Architectual Design',
+    description:
+      'Li Europan lingues es membres del sam familie. Lor separat existentie es un myth.',
+    link: 'https://stillwaterconstructionredding.com/',
+  },
+];
+---
+
 <section id="gallery-43">
   <div class="cs-container">
     <div class="cs-content">
@@ -12,7 +29,7 @@
     </div>
     <div class="cs-image-group">
       <!-- Image 1 -->
-      <a class="cs-item" href="">
+      <a class="cs-item" href="/">
         <picture class="cs-picture">
           <source
             media="(max-width: 600px)"
@@ -362,7 +379,7 @@
         width: 100%;
         height: 100%;
         padding: calc(16 / 16 * 1rem);
-        background-color: rgb(229 87 44 / 90%);
+        background-color: rgba(var(--primary) / 90%);
         opacity: 0;
         position: absolute;
         display: flex;

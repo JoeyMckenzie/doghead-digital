@@ -1,7 +1,14 @@
+---
+import spaceBackground from '~/assets/images/space.webp';
+import spaceGif from '~/assets/images/space_gif.mp4';
+import techIllustration from '~/assets/images/undraw_visionary_technology_re_jfp7.svg';
+import { Image } from 'astro:assets';
+---
+
 <section id="hero-1950">
   <div class="cs-container">
     <div class="cs-content">
-      <h1 class="cs-title">We do not cook, we create your emotions!</h1>
+      <h1 class="cs-title">Your Vision, Our Innovation</h1>
       <div class="cs-flex-group">
         <p class="cs-text">
           My passion for food has brought many new, fun and delicious dishes to
@@ -12,19 +19,14 @@
     </div>
   </div>
 
-  <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
+  <!-- Background Image, there's a background image in the CSS for the parallax
+  effect you'll need to change as well if you swap out our images -->
   <picture class="cs-background">
-    <source
-      media="(max-width: 600px)"
-      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/restaurant-space.jpeg"
-    />
-    <source
-      media="(min-width: 601px)"
-      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/restaurant-space.jpeg"
-    />
-    <img
+    <source media="(max-width: 600px)" srcset={techIllustration.src} />
+    <source media="(min-width: 601px)" srcset={techIllustration.src} />
+    <Image
       decoding="async"
-      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/restaurant-space.jpeg"
+      src={techIllustration}
       alt="restaurant"
       width="2250"
       height="1500"

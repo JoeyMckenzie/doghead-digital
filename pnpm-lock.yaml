@@ -23,6 +23,9 @@ importers:
       '@iconify-json/cil':
         specifier: ^1.1.8
         version: 1.1.8
+      '@iconify-json/material-symbols':
+        specifier: ^1.1.84
+        version: 1.1.84
       '@iconify-json/mdi':
         specifier: ^1.1.67
         version: 1.1.67
@@ -585,6 +588,9 @@ packages:
 
   '@iconify-json/cil@1.1.8':
     resolution: {integrity: sha512-Fg///8GadSwAKu8fV2hAWEUDE1RNlu9BqWtZrtu10/lq517tunsaGrojOTW8bhkMrLshTQPgWKWg0kPBEK4h5w==}
+
+  '@iconify-json/material-symbols@1.1.84':
+    resolution: {integrity: sha512-Vio0Ns2rzdTsushHGBiyAcIIbGNWXI6nTNsrVqcq1EEPkfNkuchufBMvErs9vdc1vN1Fj7Ul3uWA3r988TIvfQ==}
 
   '@iconify-json/mdi@1.1.67':
     resolution: {integrity: sha512-00nllHES8hyACwIfgySlQgAE6MKgpr2wsKfpifMiZWZ9aXC5l4Jb0lR3lJSWwXgOW6kzAOdzC3T+2VOfBBZ13A==}
@@ -4772,6 +4778,10 @@ snapshots:
   '@humanwhocodes/retry@0.3.0': {}
 
   '@iconify-json/cil@1.1.8':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/material-symbols@1.1.84':
     dependencies:
       '@iconify/types': 2.0.0
 

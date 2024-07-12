@@ -2,7 +2,7 @@
   "name": "doghead-digital",
   "type": "module",
   "version": "0.0.1",
-  "packageManager": "pnpm@9.4.0",
+  "packageManager": "pnpm@9.5.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -22,6 +22,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/ubuntu": "^5.0.13",
     "@iconify-json/cil": "^1.1.8",
+    "@iconify-json/material-symbols": "^1.1.84",
     "@iconify-json/mdi": "^1.1.67",
     "@iconify-json/ph": "^1.1.13",
     "astro": "^4.11.5",

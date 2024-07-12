@@ -1,19 +1,18 @@
+---
+import spaceBackground from '~/assets/images/space.webp';
+import { Image } from 'astro:assets';
+---
+
 <section id="sbsr-599">
   <picture class="cs-background">
     <!--Mobile Image-->
-    <source
-      media="(max-width: 600px)"
-      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/room3-m.jpg"
-    />
+    <source media="(max-width: 600px)" srcset={spaceBackground.src} />
     <!--Tablet and above Image-->
-    <source
-      media="(min-width: 601px)"
-      srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/room3.jpg"
-    />
-    <img
+    <source media="(min-width: 601px)" srcset={spaceBackground.src} />
+    <Image
       loading="lazy"
       decoding="async"
-      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/room3.jpg"
+      src={spaceBackground}
       alt="room"
       width="960"
       height="796"
@@ -34,16 +33,12 @@
         dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum
       </p>
-      <a href="" class="cs-button-solid">Contact Us</a>
+      <a href="/contact" class="cs-button-solid">Let's Talk!</a>
     </div>
   </div>
 </section>
 
 <style lang="scss">
-  /* -- -------------------------- -->
-<---   Side By Side Reverse     -->
-<--- -------------------------- - */
-
   /* Mobile - 360px */
   @media only screen and (width >= 0) {
     #sbsr-599 {
