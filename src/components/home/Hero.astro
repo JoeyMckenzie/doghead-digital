@@ -1,7 +1,5 @@
 ---
-import spaceBackground from '~/assets/images/space.webp';
-import spaceGif from '~/assets/images/space_gif.mp4';
-import techIllustration from '~/assets/images/undraw_visionary_technology_re_jfp7.svg';
+import background from '~/assets/images/space.webp';
 import { Image } from 'astro:assets';
 ---
 
@@ -22,14 +20,12 @@ import { Image } from 'astro:assets';
   <!-- Background Image, there's a background image in the CSS for the parallax
   effect you'll need to change as well if you swap out our images -->
   <picture class="cs-background">
-    <source media="(max-width: 600px)" srcset={techIllustration.src} />
-    <source media="(min-width: 601px)" srcset={techIllustration.src} />
+    <source media="(max-width: 600px)" srcset={background.src} />
+    <source media="(min-width: 601px)" srcset={background.src} />
     <Image
       decoding="async"
-      src={techIllustration}
+      src={background}
       alt="restaurant"
-      width="2250"
-      height="1500"
       aria-hidden="true"
     />
   </picture>
@@ -204,7 +200,7 @@ import { Image } from 'astro:assets';
   @media only screen and (width >= 100rem) {
     #hero-1950 {
       .cs-background {
-        background: url('https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/restaurant-space.jpeg');
+        background: url('~/assets/images/space.webp');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;

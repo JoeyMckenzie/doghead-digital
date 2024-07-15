@@ -17,6 +17,7 @@
     "prepare": "git config core.hookspath .githooks"
   },
   "dependencies": {
+    "@astrojs/alpinejs": "^0.4.0",
     "@astrojs/check": "^0.8.0",
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
@@ -25,6 +26,8 @@
     "@iconify-json/material-symbols": "^1.1.84",
     "@iconify-json/mdi": "^1.1.67",
     "@iconify-json/ph": "^1.1.13",
+    "@types/alpinejs": "^3.13.10",
+    "alpinejs": "^3.14.1",
     "astro": "^4.11.5",
     "astro-icon": "^1.1.0",
     "astro-robots-txt": "^1.0.0",
