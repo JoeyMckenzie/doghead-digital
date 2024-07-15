@@ -32,6 +32,9 @@ importers:
       '@iconify-json/cil':
         specifier: ^1.1.8
         version: 1.1.8
+      '@iconify-json/ic':
+        specifier: ^1.1.17
+        version: 1.1.17
       '@iconify-json/material-symbols':
         specifier: ^1.1.84
         version: 1.1.84
@@ -41,6 +44,9 @@ importers:
       '@iconify-json/ph':
         specifier: ^1.1.13
         version: 1.1.13
+      '@iconify-json/uil':
+        specifier: ^1.1.8
+        version: 1.1.8
       '@types/alpinejs':
         specifier: ^3.13.10
         version: 3.13.10
@@ -637,6 +643,9 @@ packages:
   '@iconify-json/cil@1.1.8':
     resolution: {integrity: sha512-Fg///8GadSwAKu8fV2hAWEUDE1RNlu9BqWtZrtu10/lq517tunsaGrojOTW8bhkMrLshTQPgWKWg0kPBEK4h5w==}
 
+  '@iconify-json/ic@1.1.17':
+    resolution: {integrity: sha512-EvAjZzVESmN36zlyefylePUNaU2BQ3eRKVZ6KQSQ2bG01ppoZaiFZRri74VTyvp5Mlv2yn68ux1fgCoT+etGmA==}
+
   '@iconify-json/material-symbols@1.1.84':
     resolution: {integrity: sha512-Vio0Ns2rzdTsushHGBiyAcIIbGNWXI6nTNsrVqcq1EEPkfNkuchufBMvErs9vdc1vN1Fj7Ul3uWA3r988TIvfQ==}
 
@@ -645,6 +654,9 @@ packages:
 
   '@iconify-json/ph@1.1.13':
     resolution: {integrity: sha512-xtM4JJ63HCKj09WRqrBswXiHrpliBlqboWSZH8odcmqYXbvIFceU9/Til4V+MQr6+MoUC+KB72cxhky2+A6r/g==}
+
+  '@iconify-json/uil@1.1.8':
+    resolution: {integrity: sha512-zkWB8XImzb1gfi5kN9xAfDXF5OqzxbKvtZq9xRUplEWEJYOoDB1RpbbQpCwJQ41j8Nf0ag0LFJr++qhYmvxftQ==}
 
   '@iconify/tools@3.0.7':
     resolution: {integrity: sha512-DxfhFLMnooS34dHelpGUnnYrxLZHs0czC1CgrBhAbuL8ddVzBb2VEQm8kh9qGh7A34qeXAB5iSHH3A72rAaFrg==}
@@ -5035,6 +5047,10 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
+  '@iconify-json/ic@1.1.17':
+    dependencies:
+      '@iconify/types': 2.0.0
+
   '@iconify-json/material-symbols@1.1.84':
     dependencies:
       '@iconify/types': 2.0.0
@@ -5044,6 +5060,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/ph@1.1.13':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/uil@1.1.8':
     dependencies:
       '@iconify/types': 2.0.0
 
