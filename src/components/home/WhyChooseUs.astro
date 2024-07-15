@@ -7,12 +7,12 @@ import { Icon } from 'astro-icon/components';
     <div class="cs-content">
       <span class="cs-topper">Custom Web Design</span>
       <h2 class="cs-title">
-        $0 Down, $150 Per Month, 12 Month Minimum Contract
+        Month-to-month or One-time payments, a plan for everyone
       </h2>
       <p class="cs-text">
-        $0 down for a standard 5 page small business website. If you need more
-        than that then we have to do custom pricing based on the scope of work,
-        number of additional pages, and time involved.
+        We offer a different pricing models to suit you and your business. From
+        monthly plans starting at $150 to one-time payments, we'll work with you
+        to offer a plan that fits your needs.
       </p>
       <p class="cs-text">
         <strong
@@ -52,28 +52,6 @@ import { Icon } from 'astro-icon/components';
           scores in every category.
         </p>
       </li>
-      <li class="cs-item-picture">
-        <picture class="cs-picture">
-          <!--Mobile Image-->
-          <source
-            media="(max-width: 600px)"
-            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hand-shake.jpg"
-          />
-          <!--Tablet and above Image-->
-          <source
-            media="(min-width: 601px)"
-            srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hand-shake.jpg"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/hand-shake.jpg"
-            alt="people"
-            width="590"
-            height="418"
-          />
-        </picture>
-      </li>
       <li class="cs-item">
         <h3 class="cs-h3">
           <Icon class="cs-h3-icon" name="material-symbols:edit-outline" />
@@ -112,9 +90,14 @@ import { Icon } from 'astro-icon/components';
 </section>
 
 <style lang="scss">
-  /* -- -------------------------- -->
-<---        Why Choose          -->
-<--- -------------------------- - */
+  #tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
 
   /* Mobile - 360px */
   @media only screen and (width >= 0) {
