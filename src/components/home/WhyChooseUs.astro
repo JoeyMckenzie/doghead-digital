@@ -1,5 +1,44 @@
 ---
 import { Icon } from 'astro-icon/components';
+
+const perks = [
+  {
+    title: 'Custom Code',
+    description:
+      'No website builders or admin panels. Your website is 100% custom coded by hand, ensuring the best performance and SEO possible.',
+    icon: 'ph:code',
+  },
+  {
+    title: 'Mobile Friendly',
+    description:
+      "Most of today's traffic comes from mobile devices. Your website will be mobile friendly with a design you'll love.",
+    icon: 'cil:mobile',
+  },
+  {
+    title: 'Anytime Updates',
+    description:
+      "Want to make some changes to your website? Not a problem, contact us anytime we'll handle it that same day.",
+    icon: 'mdi:pencil-outline',
+  },
+  {
+    title: 'Managed Hosting',
+    description:
+      'Let your servers be our problem. We maintain, manage, and make sure your server hosts are safe.',
+    icon: 'uil:servers',
+  },
+  {
+    title: 'Peak Performance',
+    description:
+      "We're obsessed with performance and guarantee near perfect Lighthouse scores in every category.",
+    icon: 'material-symbols:speed-outline',
+  },
+  {
+    title: 'Analytics Amplified',
+    description:
+      'We handle Google Insights and Google Site Verification to ensure your website outshines your competitors and is always up-to-date.',
+    icon: 'ic:baseline-query-stats',
+  },
+];
 ---
 
 <section id="why-choose-1371">
@@ -22,66 +61,17 @@ import { Icon } from 'astro-icon/components';
       </p>
     </div>
     <ul class="cs-card-group">
-      <li class="cs-item">
-        <h3 class="cs-h3">
-          <Icon class="cs-h3-icon" name="uil:servers" />
-          Hosting Fees Included
-        </h3>
-        <p class="cs-item-text">
-          Let your servers be our problem. We maintain, manage, and make sure
-          your server hosts are safe.
-        </p>
-      </li>
-      <li class="cs-item">
-        <h3 class="cs-h3">
-          <Icon class="cs-h3-icon" name="ic:outline-headset" />
-          Anytime Customer Service
-        </h3>
-        <p class="cs-item-text">
-          Want to make some changes to your website? Not a problem, contact us
-          anytime we'll handle it that same day.
-        </p>
-      </li>
-      <li class="cs-item">
-        <h3 class="cs-h3">
-          <Icon class="cs-h3-icon" name="material-symbols:speed-outline" />
-          Perfect Google Speed
-        </h3>
-        <p class="cs-item-text">
-          We're obsessed with performance and guarantee near perfect Lighthouse
-          scores in every category.
-        </p>
-      </li>
-      <li class="cs-item">
-        <h3 class="cs-h3">
-          <Icon class="cs-h3-icon" name="material-symbols:edit-outline" />
-          Anytime Edits
-        </h3>
-        <p class="cs-item-text">
-          We don't impose limits to edits and updates requested to your site.
-          Anytime, any change.
-        </p>
-      </li>
-      <li class="cs-item">
-        <h3 class="cs-h3">
-          <Icon name="ph:code" class="cs-h3-icon" />
-          Custome Development
-        </h3>
-        <p class="cs-item-text">
-          No website builders or admin panels. Your website is 100% custom coded
-          by hand, ensuring the best performance and SEO possible.
-        </p>
-      </li>
-      <li class="cs-item">
-        <h3 class="cs-h3">
-          <Icon name="ic:baseline-query-stats" class="cs-h3-icon" />
-          Google Analytics
-        </h3>
-        <p class="cs-item-text">
-          We handle Google Insights and Google Site Verification to ensure your
-          website outshines your competitors and is always up-to-date.
-        </p>
-      </li>
+      {
+        perks.map(({ title, description, icon }) => (
+          <li class="cs-item">
+            <h3 class="cs-h3">
+              <Icon class="cs-h3-icon" name={icon} />
+              {title}
+            </h3>
+            <p class="cs-item-text">{description}</p>
+          </li>
+        ))
+      }
     </ul>
     <a href="/about" class="cs-button-solid">Discover More</a>
   </div>

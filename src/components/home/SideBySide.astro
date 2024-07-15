@@ -1,6 +1,32 @@
 ---
 import spaceBackground from '~/assets/images/space.webp';
 import { Image } from 'astro:assets';
+import Particles from 'astro-particles';
+import type { ISourceOptions } from 'tsparticles-engine';
+
+const options: ISourceOptions = {
+  preset: 'links',
+  fullScreen: {
+    zIndex: -2,
+    enable: false,
+  },
+  interactivity: {
+    events: {
+      onhover: {
+        enable: true,
+        mode: 'repulse',
+      },
+    },
+  },
+  particles: {
+    number: {
+      value: 30,
+    },
+    move: {
+      enable: true,
+    },
+  },
+};
 ---
 
 <section id="sbsr-599">
