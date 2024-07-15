@@ -60,63 +60,12 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://api.iconify.design" />
-
-    <!-- Alpine Plugins -->
-    <script
-      is:inline
-      defer
-      src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"
-    ></script>
-    <script
-      is:inline
-      defer
-      src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js"
-    ></script>
   </head>
   <body x-data :class="$store.global.getBodyClass()">
     <Navbar />
     <slot />
     <FooterContactForm />
-    <script>
-      // This script adds a class to the body after scrolling 100px
-      // and we used these body.scroll styles to create some on scroll
-      // animations with the navbar
-
-      document.addEventListener('scroll', () => {
-        const scroll = document.documentElement.scrollTop;
-        if (scroll >= 100) {
-          document.querySelector('body')?.classList.add('scroll');
-        } else {
-          document.querySelector('body')?.classList.remove('scroll');
-        }
-      });
-
-      document.addEventListener('alpine:init', () => {
-        Alpine.store('global', {
-          init() {
-            // this.on = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            this.on = Alpine.$persist(true).as('darkMode_on');
-          },
-          on: false,
-          expanded: false,
-          toggle() {
-            this.on = !this.on;
-          },
-          getBodyClass() {
-            let className = '';
-
-            if (this.on) {
-              className += 'dark-mode';
-            }
-
-            if (this.expanded) {
-              className += ' cs-open';
-            }
-
-            return className;
-          },
-        });
-      });
- </script>
+    <script src="~/scripts/navbar.ts"></script>
+    <script src="~/scripts/store.ts"></script>
   </body>
 </html>

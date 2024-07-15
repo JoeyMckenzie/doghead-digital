@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@alpinejs/collapse':
+        specifier: ^3.14.1
+        version: 3.14.1
+      '@alpinejs/persist':
+        specifier: ^3.14.1
+        version: 3.14.1
       '@astrojs/alpinejs':
         specifier: ^0.4.0
         version: 0.4.0(@types/alpinejs@3.13.10)(alpinejs@3.14.1)
@@ -72,6 +78,12 @@ importers:
       '@antfu/eslint-config':
         specifier: 2.22.0-beta.3
         version: 2.22.0-beta.3(@vue/compiler-sfc@3.4.31)(astro-eslint-parser@1.0.2(typescript@5.5.3))(eslint-plugin-astro@1.2.3(eslint@9.6.0)(typescript@5.5.3))(eslint-plugin-format@0.1.2(eslint@9.6.0))(eslint@9.6.0)(prettier-plugin-astro@0.14.0)(typescript@5.5.3)
+      '@types/alpinejs__collapse':
+        specifier: ^3.13.4
+        version: 3.13.4
+      '@types/alpinejs__persist':
+        specifier: ^3.13.4
+        version: 3.13.4
       astro-eslint-parser:
         specifier: ^1.0.2
         version: 1.0.2(typescript@5.5.3)
@@ -102,6 +114,9 @@ importers:
       prettier-plugin-astro:
         specifier: ^0.14.0
         version: 0.14.0
+      sharp:
+        specifier: ^0.33.4
+        version: 0.33.4
       stylelint:
         specifier: ^16.6.1
         version: 16.6.1(typescript@5.5.3)
@@ -126,6 +141,12 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
+
+  '@alpinejs/collapse@3.14.1':
+    resolution: {integrity: sha512-aI0pq8SjK7c43/nMIVL1Lt8naowPRepqQGNSb9KaG7adEneOwj/vq4ZaeZYjuGbd8sq1LKPwWU+klIZIXXujUA==}
+
+  '@alpinejs/persist@3.14.1':
+    resolution: {integrity: sha512-odlZ6RZRcysaIdbhcbvuxRmq1wXlKWytjsfgz4U45vZbozU/WcTDkWbyyHjnrbMWgFIsS/jRiohtJuXN0js7PA==}
 
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -924,6 +945,12 @@ packages:
 
   '@types/alpinejs@3.13.10':
     resolution: {integrity: sha512-ah53tF6mWuuwerpDE7EHwbZErNDJQlsLISPqJhYj2RZ9nuTYbRknSkqebUd3igkhLIZKkPa7IiXjSn9qsU9O2w==}
+
+  '@types/alpinejs__collapse@3.13.4':
+    resolution: {integrity: sha512-kUBJWEDrHahD2Tb1lrir7iNTGN9ukvoJFjOY41EGC7F21E1KMSch5NrGgE0sqINrRT3lf1UZm3wxB3CNjJHBwg==}
+
+  '@types/alpinejs__persist@3.13.4':
+    resolution: {integrity: sha512-H+cW7294EV5fGmIGD3BCJme54//KyWxZcP4uI9pk6W7fECR5hEwdO7j7wogz0o4vapS/kXiXiAjuqC9F+W0Vpw==}
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -4292,6 +4319,10 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
+  '@alpinejs/collapse@3.14.1': {}
+
+  '@alpinejs/persist@3.14.1': {}
+
   '@ampproject/remapping@2.3.0':
     dependencies:
       '@jridgewell/gen-mapping': 0.3.5
@@ -5106,6 +5137,14 @@ snapshots:
 
   '@types/alpinejs@3.13.10': {}
 
+  '@types/alpinejs__collapse@3.13.4':
+    dependencies:
+      '@types/alpinejs': 3.13.10
+
+  '@types/alpinejs__persist@3.13.4':
+    dependencies:
+      '@types/alpinejs': 3.13.10
+
   '@types/babel__core@7.20.5':
     dependencies:
       '@babel/parser': 7.24.7
@@ -5911,7 +5950,6 @@ snapshots:
     dependencies:
       color-name: 1.1.4
       simple-swizzle: 0.2.2
-    optional: true
 
   color-support@1.1.3: {}
 
@@ -5919,7 +5957,6 @@ snapshots:
     dependencies:
       color-convert: 2.0.1
       color-string: 1.9.1
-    optional: true
 
   colord@2.9.3: {}
 
@@ -6027,8 +6064,7 @@ snapshots:
 
   dequal@2.0.3: {}
 
-  detect-libc@2.0.3:
-    optional: true
+  detect-libc@2.0.3: {}
 
   deterministic-object-hash@2.0.2:
     dependencies:
@@ -7002,8 +7038,7 @@ snapshots:
 
   is-arrayish@0.2.1: {}
 
-  is-arrayish@0.3.2:
-    optional: true
+  is-arrayish@0.3.2: {}
 
   is-binary-path@2.1.0:
     dependencies:
@@ -8462,7 +8497,6 @@ snapshots:
       '@img/sharp-wasm32': 0.33.4
       '@img/sharp-win32-ia32': 0.33.4
       '@img/sharp-win32-x64': 0.33.4
-    optional: true
 
   shebang-command@2.0.0:
     dependencies:
@@ -8482,7 +8516,6 @@ snapshots:
   simple-swizzle@0.2.2:
     dependencies:
       is-arrayish: 0.3.2
-    optional: true
 
   sisteransi@1.0.5: {}
 

@@ -17,6 +17,8 @@
     "prepare": "git config core.hookspath .githooks"
   },
   "dependencies": {
+    "@alpinejs/collapse": "^3.14.1",
+    "@alpinejs/persist": "^3.14.1",
     "@astrojs/alpinejs": "^0.4.0",
     "@astrojs/check": "^0.8.0",
     "@astrojs/sitemap": "^3.1.6",
@@ -40,6 +42,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "2.22.0-beta.3",
+    "@types/alpinejs__collapse": "^3.13.4",
+    "@types/alpinejs__persist": "^3.13.4",
     "astro-eslint-parser": "^1.0.2",
     "eslint": "9.6.0",
     "eslint-plugin-astro": "^1.2.3",
@@ -50,6 +54,7 @@
     "postcss-scss": "^4.0.9",
     "postscss": "^2.0.0",
     "prettier-plugin-astro": "^0.14.0",
+    "sharp": "^0.33.4",
     "stylelint": "^16.6.1",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recommended-scss": "^14.0.0",
