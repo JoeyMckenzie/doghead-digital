@@ -25,7 +25,7 @@ importers:
         version: 3.1.6
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.11.5(@types/node@20.14.10)(sass@1.77.6)(typescript@5.5.3))(tailwindcss@3.4.4)
+        version: 5.1.0(astro@4.11.5(@types/node@20.14.10)(sass@1.77.8)(typescript@5.5.3))(tailwindcss@3.4.4)
       '@fontsource/ubuntu':
         specifier: ^5.0.13
         version: 5.0.13
@@ -58,7 +58,7 @@ importers:
         version: 3.14.1
       astro:
         specifier: ^4.11.5
-        version: 4.11.5(@types/node@20.14.10)(sass@1.77.6)(typescript@5.5.3)
+        version: 4.11.5(@types/node@20.14.10)(sass@1.77.8)(typescript@5.5.3)
       astro-icon:
         specifier: ^1.1.0
         version: 1.1.0
@@ -73,10 +73,10 @@ importers:
         version: 0.8.4(prettier-plugin-astro@0.14.0)(prettier@3.3.2)(typescript@5.5.3)
       astro-seo-schema:
         specifier: ^4.0.2
-        version: 4.0.2(astro@4.11.5(@types/node@20.14.10)(sass@1.77.6)(typescript@5.5.3))(schema-dts@1.1.2(typescript@5.5.3))
+        version: 4.0.2(astro@4.11.5(@types/node@20.14.10)(sass@1.77.8)(typescript@5.5.3))(schema-dts@1.1.2(typescript@5.5.3))
       sass:
-        specifier: ^1.77.6
-        version: 1.77.6
+        specifier: ^1.77.8
+        version: 1.77.8
       schema-dts:
         specifier: ^1.1.2
         version: 1.1.2(typescript@5.5.3)
@@ -3602,8 +3602,8 @@ packages:
     engines: {node: '>=12'}
     hasBin: true
 
-  sass@1.77.6:
-    resolution: {integrity: sha512-ByXE1oLD79GVq9Ht1PeHWCPMPB8XHpBuz1r85oByKHjZY6qV6rWnQovQzXJXuQ/XyE1Oj3iPk3lo28uzaRA2/Q==}
+  sass@1.77.8:
+    resolution: {integrity: sha512-4UHg6prsrycW20fqLGPShtEvo/WyHRVRHwOP4DzkUrObWoWI05QBSfzU71TVB7PFaL104TwNaHpjlWXAZbQiNQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -4691,9 +4691,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.11.5(@types/node@20.14.10)(sass@1.77.6)(typescript@5.5.3))(tailwindcss@3.4.4)':
+  '@astrojs/tailwind@5.1.0(astro@4.11.5(@types/node@20.14.10)(sass@1.77.8)(typescript@5.5.3))(tailwindcss@3.4.4)':
     dependencies:
-      astro: 4.11.5(@types/node@20.14.10)(sass@1.77.6)(typescript@5.5.3)
+      astro: 4.11.5(@types/node@20.14.10)(sass@1.77.8)(typescript@5.5.3)
       autoprefixer: 10.4.19(postcss@8.4.39)
       postcss: 8.4.39
       postcss-load-config: 4.0.2(postcss@8.4.39)
@@ -5840,9 +5840,9 @@ snapshots:
       valid-filename: 4.0.0
       zod: 3.23.8
 
-  astro-seo-schema@4.0.2(astro@4.11.5(@types/node@20.14.10)(sass@1.77.6)(typescript@5.5.3))(schema-dts@1.1.2(typescript@5.5.3)):
+  astro-seo-schema@4.0.2(astro@4.11.5(@types/node@20.14.10)(sass@1.77.8)(typescript@5.5.3))(schema-dts@1.1.2(typescript@5.5.3)):
     dependencies:
-      astro: 4.11.5(@types/node@20.14.10)(sass@1.77.6)(typescript@5.5.3)
+      astro: 4.11.5(@types/node@20.14.10)(sass@1.77.8)(typescript@5.5.3)
       schema-dts: 1.1.2(typescript@5.5.3)
 
   astro-seo@0.8.4(prettier-plugin-astro@0.14.0)(prettier@3.3.2)(typescript@5.5.3):
@@ -5853,7 +5853,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@4.11.5(@types/node@20.14.10)(sass@1.77.6)(typescript@5.5.3):
+  astro@4.11.5(@types/node@20.14.10)(sass@1.77.8)(typescript@5.5.3):
     dependencies:
       '@astrojs/compiler': 2.8.2
       '@astrojs/internal-helpers': 0.4.1
@@ -5911,8 +5911,8 @@ snapshots:
       tsconfck: 3.1.1(typescript@5.5.3)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.3.3(@types/node@20.14.10)(sass@1.77.6)
-      vitefu: 0.2.5(vite@5.3.3(@types/node@20.14.10)(sass@1.77.6))
+      vite: 5.3.3(@types/node@20.14.10)(sass@1.77.8)
+      vitefu: 0.2.5(vite@5.3.3(@types/node@20.14.10)(sass@1.77.8))
       which-pm: 2.2.0
       yargs-parser: 21.1.1
       zod: 3.23.8
@@ -8652,7 +8652,7 @@ snapshots:
       scss-tokenizer: 0.4.3
       yargs: 17.7.2
 
-  sass@1.77.6:
+  sass@1.77.8:
     dependencies:
       chokidar: 3.6.0
       immutable: 4.3.6
@@ -9480,7 +9480,7 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite@5.3.3(@types/node@20.14.10)(sass@1.77.6):
+  vite@5.3.3(@types/node@20.14.10)(sass@1.77.8):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.39
@@ -9488,11 +9488,11 @@ snapshots:
     optionalDependencies:
       '@types/node': 20.14.10
       fsevents: 2.3.3
-      sass: 1.77.6
+      sass: 1.77.8
 
-  vitefu@0.2.5(vite@5.3.3(@types/node@20.14.10)(sass@1.77.6)):
+  vitefu@0.2.5(vite@5.3.3(@types/node@20.14.10)(sass@1.77.8)):
     optionalDependencies:
-      vite: 5.3.3(@types/node@20.14.10)(sass@1.77.6)
+      vite: 5.3.3(@types/node@20.14.10)(sass@1.77.8)
 
   volar-service-css@0.0.59(@volar/language-service@2.4.0-alpha.15):
     dependencies:
