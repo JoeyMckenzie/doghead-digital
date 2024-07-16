@@ -60,6 +60,18 @@ const { title, description } = Astro.props;
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://api.iconify.design" />
+
+    {
+      Astro.url.pathname === '/' && (
+        <>
+          <script
+            defer
+            src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+          />
+          <script defer src="~/scripts/decap.ts" />
+        </>
+      )
+    }
   </head>
   <body x-data :class="$store.global.getBodyClass()">
     <Navbar />
