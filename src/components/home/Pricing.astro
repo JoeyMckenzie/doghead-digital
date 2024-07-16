@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 interface PricingPlanDetails {
   product: string;
   price: number;
@@ -13,14 +15,18 @@ interface PricingPlans {
 
 const pricingPlans: PricingPlans = {
   singleProject: {
-    product: 'Single Project',
+    product: 'Lump Sum',
     price: 3000,
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida, ex in commodo euismod, justo nisi bibendum libero',
     includedServices: [
-      'Praesent feugiat sem mattis.',
-      'Praesent feugiat sem mattis.',
-      'Praesent feugiat sem mattis.',
+      '5-Page Website Design',
+      'Mobile-First, Responsive Design',
+      'Custom Coded Development, From Scratch',
+      'Hosting, Domain, and SSL certificate Included',
+      'Contact Form Integration',
+      'Dark Mode',
+      'Google Business Profile Setup and Maps Listing',
     ],
   },
   subscription: {
@@ -29,9 +35,13 @@ const pricingPlans: PricingPlans = {
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida, ex in commodo euismod, justo nisi bibendum libero',
     includedServices: [
-      'Praesent feugiat sem mattis.',
-      'Praesent feugiat sem mattis.',
-      'Praesent feugiat sem mattis.',
+      'Everything in Lump Sum Pricing',
+      'Unlimited Stock Images (If Needed)',
+      'Unlimited Edits',
+      '1x Business Email',
+      '24/7 Support',
+      '5 Working-Day SLA',
+      'Website Redesign Every 3 Years',
     ],
   },
 };
@@ -41,30 +51,17 @@ const pricingPlans: PricingPlans = {
   <div class="cs-container">
     <div class="cs-content">
       <span class="cs-topper">Pricing</span>
-      <h2 class="cs-title">
-        Transparent Pricing Options for Your Construction Project
-      </h2>
+      <h2 class="cs-title">Transparent Pricing Options to Fit Your Budget</h2>
       <p class="cs-text">
-        Our We believe in transparency when it comes to pricing for your
-        construction project. We offer three different packages to meet your
-        specific needs and budget,
+        We believe in transparency when it comes to pricing. We offer monthly
+        and lump sum packages to meet your specific needs and budget.
       </p>
-      <a href="" class="cs-button-solid">Book Appointment</a>
+      <a href="/contact" class="cs-button-solid">Get a Free Consultation</a>
     </div>
     <ul class="cs-card-group">
       <li class="cs-item">
-        <span class="cs-popular-tag">Recommended</span>
         <picture class="cs-picture">
-          <img
-            class="cs-picture-icon"
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/walking.svg"
-            alt="checkmark"
-            width="44"
-            height="44"
-          />
+          <Icon class="cs-picture-icon" name="mdi:cart-variant" size={44} />
         </picture>
         <span class="cs-package">{pricingPlans.singleProject.product}</span>
         <span class="cs-price">
@@ -78,35 +75,24 @@ const pricingPlans: PricingPlans = {
           {
             pricingPlans.singleProject.includedServices.map((service) => (
               <li class="cs-li">
-                <img
-                  class="cs-icon"
-                  aria-hidden="true"
-                  loading="lazy"
-                  decoding="async"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/round-check.svg"
-                  alt="checkmark"
-                  width="18"
-                  height="18"
+                <Icon
+                  size={18}
+                  class="cs-icon text-green-500"
+                  name="mdi:check-circle"
                 />
                 {service}
               </li>
             ))
           }
         </ul>
-        <a href="" class="cs-button-transparent">Book Appointment</a>
+        <a href="/pricing" class="cs-button-transparent">Learn More</a>
       </li>
       <li class="cs-item cs-popular">
-        <span class="cs-popular-tag">Recommended</span>
         <picture class="cs-picture">
-          <img
-            class="cs-picture-icon"
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/badge.svg"
-            alt="checkmark"
-            width="44"
-            height="44"
+          <Icon
+            class="cs-picture-icon text-white"
+            name="mdi:calendar-month"
+            size={44}
           />
         </picture>
         <span class="cs-package">{pricingPlans.subscription.product}</span>
@@ -121,22 +107,17 @@ const pricingPlans: PricingPlans = {
           {
             pricingPlans.subscription.includedServices.map((service) => (
               <li class="cs-li">
-                <img
-                  class="cs-icon"
-                  aria-hidden="true"
-                  loading="lazy"
-                  decoding="async"
-                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/round-check.svg"
-                  alt="checkmark"
-                  width="18"
-                  height="18"
+                <Icon
+                  size={18}
+                  class="cs-icon text-green-500"
+                  name="mdi:check-circle"
                 />
                 {service}
               </li>
             ))
           }
         </ul>
-        <a href="" class="cs-button-transparent">Book Appointment</a>
+        <a href="/pricing" class="cs-button-transparent">Learn More</a>
       </li>
     </ul>
     <picture class="cs-waves-wrapper">

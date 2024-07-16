@@ -5,7 +5,7 @@ const perks = [
   {
     title: 'Custom Code',
     description:
-      'No website builders or admin panels. Your website is 100% custom coded by hand, ensuring the best performance and SEO possible.',
+      'No website builders or admin panels. Your website is 100% crafted by hand, custom-tailored to your brand and business.',
     icon: 'ph:code',
   },
   {
@@ -29,7 +29,7 @@ const perks = [
   {
     title: 'Peak Performance',
     description:
-      "We're obsessed with performance and guarantee near perfect Lighthouse scores in every category.",
+      "We're obsessed with performance and guarantee near-perfect Lighthouse scores in every category.",
     icon: 'material-symbols:speed-outline',
   },
   {
@@ -41,90 +41,43 @@ const perks = [
 ];
 ---
 
-<section id="why-choose-1371">
+<section id="services-346">
   <div class="cs-container">
     <div class="cs-content">
       <span class="cs-topper">Custom Web Design</span>
       <h2 class="cs-title">
-        Month-to-month or One-time payments, a plan for everyone
+        Month-to-month or one-time payments, there's a plan for everyone
       </h2>
       <p class="cs-text">
-        We offer a different pricing models to suit you and your business. From
+        We offer different pricing models to suit you and your business. From
         monthly plans starting at $150 to one-time payments, we'll work with you
         to offer a plan that fits your needs.
-      </p>
-      <p class="cs-text">
-        <strong
-          >You own your domain, content, listing, and profiles. Cancel anytime
-          with no fees or hassle.</strong
-        >
       </p>
     </div>
     <ul class="cs-card-group">
       {
         perks.map(({ title, description, icon }) => (
           <li class="cs-item">
-            <h3 class="cs-h3">
-              <Icon class="cs-h3-icon" name={icon} />
-              {title}
-            </h3>
-            <p class="cs-item-text">{description}</p>
+            <a href="" class="cs-link">
+              <div class="cs-picture">
+                <Icon name={icon} class="cs-icon" size={48} />
+              </div>
+              <h3 class="cs-h3">{title}</h3>
+              <p class="cs-item-text">{description}</p>
+            </a>
           </li>
         ))
       }
     </ul>
-    <a href="/about" class="cs-button-solid">Discover More</a>
+    <a href="" class="cs-button-solid">Let's Talk!</a>
   </div>
-  <div class="cs-bubbles cs-bubbles1" aria-hidden="true"></div>
-  <div class="cs-bubbles cs-bubbles2" aria-hidden="true"></div>
 </section>
 
 <style lang="scss">
-  #tsparticles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-  }
-
   /* Mobile - 360px */
   @media only screen and (width >= 0) {
-    @keyframes floatAnimation {
-      0% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-2rem);
-      }
-
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes floatAnimation2 {
-      0% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-3rem);
-      }
-
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    #why-choose-1371 {
+    #services-346 {
       padding: var(--sectionPadding);
-      position: relative;
-
-      //   overflow: hidden;
-      z-index: 1;
 
       .cs-container {
         width: 100%;
@@ -149,262 +102,137 @@ const perks = [
         align-items: center;
       }
 
-      .cs-title {
-        max-width: 23ch;
-      }
-
-      .cs-text {
-        max-width: calc(840 / 16 * 1rem);
-        margin-bottom: calc(16 / 16 * 1rem);
-
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-
-        strong {
-          color: var(--headerColor);
-        }
-      }
-
-      .cs-item-picture {
-        list-style: none;
-        width: 100%;
-        grid-column: span 12;
-        position: relative;
-      }
-
-      .cs-picture {
-        width: 100%;
-        height: calc(418 / 16 * 1rem);
-        border-radius: calc(24 / 16 * 1rem);
-        overflow: hidden;
-        display: block;
-        position: relative;
-        z-index: 1;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-      }
-
       .cs-card-group {
         width: 100%;
         margin: 0;
         padding: 0;
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        align-items: stretch6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+
+        /* 16px - 20px */
         gap: clamp(1rem, 2vw, 1.25rem);
       }
 
       .cs-item {
         list-style: none;
+        width: 100%;
+        max-width: calc(500 / 16 * 1rem);
 
-        /* 16px - 24px */
-        padding: clamp(1rem, 3vw, 1.5rem);
+        /* 32px - 40px top & bottom */
 
-        /* prevents padding from affecting height and width */
-        box-sizing: border-box;
-        background-color: #f7f7f7;
+        /* 28px - 40px left & right */
+        padding: clamp(2rem, 3vw, 2.5rem) clamp(1.75rem, 3vw, 2.5rem);
         border-radius: calc(16 / 16 * 1rem);
         border: 1px solid #e8e8e8;
-        display: flex;
-        grid-column: span 12;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: calc(12 / 16 * 1rem);
-        transition: background-color 0.3s;
+        box-sizing: border-box;
+        transition:
+          background-color 0.3s,
+          transform 0.3s,
+          box-shadow 0.3s;
 
         &:hover {
-          background-color: var(--primary);
+          background-color: #fff;
+          box-shadow: rgb(149 157 165 / 20%) 0 8px 50px;
+          transform: translateY(calc(-7 / 16 * 1rem));
 
-          .cs-h3,
-          .cs-item-text {
-            color: var(--bodyTextColorWhite);
-          }
-
-          .cs-item-text {
-            opacity: 0.8;
-          }
-
-          .cs-h3-icon {
-            filter: grayscale(1) brightness(1000%);
+          .cs-picture {
+            &::before {
+              width: 100%;
+              height: 100%;
+              opacity: 1;
+            }
           }
         }
+      }
+
+      .cs-link {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .cs-picture {
+        width: calc(80 / 16 * 1rem);
+        height: calc(80 / 16 * 1rem);
+        margin: 0;
+        margin-bottom: calc(24 / 16 * 1rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: var(--primary);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cs-icon {
+        height: calc(32 / 16 * 1rem);
+        width: auto;
       }
 
       .cs-h3 {
         font-size: calc(20 / 16 * 1rem);
+        font-weight: 900;
+        text-align: center;
         line-height: 1.2em;
-        font-weight: 700;
         margin: 0;
+        margin-bottom: calc(12 / 16 * 1rem);
         color: var(--headerColor);
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: calc(8 / 16 * 1rem);
         transition: color 0.3s;
       }
 
-      .cs-h3-icon {
-        width: calc(24 / 16 * 1rem);
-        height: auto;
-        margin-top: 2px;
-        display: block;
-      }
-
       .cs-item-text {
-        font-size: calc(14 / 16 * 1rem);
+        font-size: calc(16 / 16 * 1rem);
+        text-align: center;
         line-height: 1.5em;
         margin: 0;
         color: var(--bodyTextColor);
-        transition:
-          color 0.3s,
-          opacity 0.3s;
+        transition: color 0.3s;
       }
 
       .cs-button-solid {
         font-size: calc(16 / 16 * 1rem);
-        line-height: calc(56 / 16 * 1rem);
+
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
         text-decoration: none;
         font-weight: 700;
-        overflow: hidden;
+        text-align: center;
         margin: 0;
         color: #fff;
-        padding: 0 calc(48 / 16 * 1rem);
-        border-radius: calc(30 / 16 * 1rem);
+        min-width: calc(150 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem);
         background-color: var(--primary);
+        border-radius: calc(4 / 16 * 1rem);
         display: inline-block;
         position: relative;
         z-index: 1;
-        transition: color 0.3s;
+
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
 
         &::before {
           content: '';
           position: absolute;
-          display: block;
           height: 100%;
           width: 0%;
-          background: #1a1a1a;
+          background: #000;
           opacity: 1;
           top: 0;
           left: 0;
           z-index: -1;
+          border-radius: calc(4 / 16 * 1rem);
           transition: width 0.3s;
         }
 
         &:hover {
-          color: var(--primary);
-
           &::before {
             width: 100%;
           }
-        }
-      }
-
-      .cs-bubbles1 {
-        width: calc(419 / 16 * 1rem);
-        height: calc(417 / 16 * 1rem);
-        position: absolute;
-        left: calc(-260 / 16 * 1rem);
-        top: calc(-240 / 16 * 1rem);
-        z-index: -1;
-
-        // &:before {
-        //     /* white border bubble */
-        //   content: "";
-        //   width: calc(330 / 16 * 1rem);
-        //   height: calc(330 / 16 * 1rem);
-        //   background: transparent;
-        //   border: 1px solid #1a1a1a;
-        //   border-radius: 50%;
-        //   opacity: 1;
-        //   position: absolute;
-        //   display: block;
-        //   top: 0;
-        //   left: 0;
-        //   animation-name: floatAnimation;
-        //   animation-duration: 5s;
-        //   animation-timing-function: ease-in-out;
-        //   animation-fill-mode: forwards;
-        //   animation-iteration-count: infinite;
-        // }
-
-        &::after {
-          /* orange bubble */
-          content: '';
-          width: calc(260 / 16 * 1rem);
-          height: calc(260 / 16 * 1rem);
-          background: var(--primary);
-          opacity: 0.1;
-          border-radius: 50%;
-          display: block;
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          z-index: -1;
-          animation-name: floatAnimation2;
-          animation-duration: 14s;
-          animation-timing-function: ease-in-out;
-          animation-fill-mode: forwards;
-          animation-iteration-count: infinite;
-        }
-      }
-
-      .cs-bubbles2 {
-        width: calc(419 / 16 * 1rem);
-        height: calc(427 / 16 * 1rem);
-        display: block;
-        position: absolute;
-
-        /* changes to 160px at larger desktop */
-        right: calc(-180 / 16 * 1rem);
-        bottom: calc(-140 / 16 * 1rem);
-        z-index: -1;
-
-        &::before {
-          /* white border bubble */
-          content: '';
-          width: calc(330 / 16 * 1rem);
-          height: calc(330 / 16 * 1rem);
-          background: transparent;
-          border: 1px solid #1a1a1a;
-          border-radius: 50%;
-          opacity: 1;
-          position: absolute;
-          display: block;
-          top: 0;
-          right: 0;
-          animation-name: floatAnimation;
-          animation-duration: 7s;
-          animation-timing-function: ease-in-out;
-          animation-fill-mode: forwards;
-          animation-iteration-count: infinite;
-        }
-
-        &::after {
-          /* orange bubble */
-          content: '';
-          width: calc(260 / 16 * 1rem);
-          height: calc(260 / 16 * 1rem);
-          background: var(--primary);
-          opacity: 0.1;
-          border-radius: 50%;
-          display: block;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          z-index: -1;
-          animation-name: floatAnimation2;
-          animation-duration: 9s;
-          animation-timing-function: ease-in-out;
-          animation-fill-mode: forwards;
-          animation-iteration-count: infinite;
         }
       }
     }
@@ -412,79 +240,15 @@ const perks = [
 
   /* Tablet - 768px */
   @media only screen and (width >= 48rem) {
-    #why-choose-1371 {
-      .cs-item {
-        grid-column: span 4;
-      }
-    }
-  }
-
-  /* Small Desktop - 1024px */
-  @media only screen and (width >= 64rem) {
-    #why-choose-1371 {
-      .cs-item-picture {
-        grid-column: 4 / span 6;
-        grid-row: 1 / span 3;
-      }
-
-      .cs-picture {
-        height: 100%;
+    #services-346 {
+      .cs-card-group {
+        flex-direction: row;
+        justify-content: center;
       }
 
       .cs-item {
-        grid-column: span 2;
-
-        &:nth-of-type(1) {
-          grid-column: 1 / span 3;
-          grid-row: 1 / span 1;
-        }
-
-        &:nth-of-type(2) {
-          grid-column: 1 / span 3;
-          grid-row: 2 / span 1;
-        }
-
-        &:nth-of-type(3) {
-          grid-column: 1 / span 3;
-          grid-row: 3 / span 1;
-        }
-
-        &:nth-of-type(5) {
-          grid-column: 10 / span 3;
-          grid-row: 1 / span 1;
-        }
-
-        &:nth-of-type(6) {
-          grid-column: 10 / span 3;
-          grid-row: 2 / span 1;
-        }
-
-        &:nth-of-type(7) {
-          grid-column: 10 / span 3;
-          grid-row: 3 / span 1;
-        }
-      }
-
-      .cs-bubbles1 {
-        left: calc(-130 / 16 * 1rem);
-        top: calc(-150 / 16 * 1rem);
-      }
-    }
-  }
-
-  /* Large Desktop 1600px */
-  @media only screen and (width >= 100rem) {
-    #why-choose-1371 {
-      .cs-bubbles1 {
-        margin-right: calc(650 / 16 * 1rem);
-        left: auto;
-        right: 50%;
-      }
-
-      .cs-bubbles2 {
-        margin-left: calc(600 / 16 * 1rem);
-        left: 50%;
-        right: auto;
+        /* we do this so it's stackable. You can add new any number of reviews you want and they will stack and center in the middle. We dont use grid because if you have an odd number of reviews, they don't stay centered.  They align with their grid lines. If you want 4 reviews in a row, lower the width under 22.5vw or 23% to get the desired sizes fit 4 in a row and then stack when you add more */
+        width: clamp(31.85%, 30.5vw, 32.28%);
       }
     }
   }
@@ -492,35 +256,40 @@ const perks = [
   /* Dark Mode */
   @media only screen and (width >= 0) {
     body.dark-mode {
-      #why-choose-1371 {
+      #services-346 {
+        .cs-topper {
+          color: var(--primaryLight);
+        }
+
         .cs-title,
         .cs-text,
+        .cs-h3,
         .cs-item-text {
           color: var(--bodyTextColorWhite);
         }
 
-        .cs-text {
-          strong {
-            color: var(--bodyTextColorWhite);
-          }
-        }
-
-        .cs-text,
-        .cs-item-text {
-          opacity: 0.8;
+        .cs-picture {
+          background-color: var(--medium);
         }
 
         .cs-item {
-          background-color: rgb(0 0 0 / 20%);
-          border-color: rgb(255 255 255 / 20%);
+          position: relative;
+          transition:
+            background-color 0.3s,
+            transform 0.3s;
 
           &:hover {
-            background-color: var(--primary);
-          }
-        }
+            background-color: var(--accent);
 
-        .cs-h3 {
-          color: var(--bodyTextColorWhite);
+            &::before {
+              opacity: 1;
+            }
+
+            .cs-h3,
+            .cs-item-text {
+              color: #fff;
+            }
+          }
         }
       }
     }

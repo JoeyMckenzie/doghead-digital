@@ -53,5 +53,11 @@
     "html",
     "astro",
     "scss"
+  ],
+  "grammarly.selectors": [
+    {
+      "language": "astro",
+      "scheme": "file"
+    }
   ]
 }

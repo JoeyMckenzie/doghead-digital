@@ -1,3 +1,30 @@
+---
+const questions = [
+  {
+    question: 'Why not just use Wix, Squarespace, or Wordpress?',
+    answer:
+      "While page-based website builders are great in some contexts, their rigidity often shows itself eventually. When you use a website builder, you're getting a product off-the-rack rather than a custom-tailored suit. Sure, it's easy to get going, but eventually, you'll need a tailor's touch to get all the details just right.",
+    extendedAnswer:
+      "We are technology professionals that stay up-to-date with the latest trends in tech, allowing you to focus on your business rather than what's new in Goggle's search ranking algorithms.",
+  },
+  {
+    question: 'What benefits do you offer over a custom website builder?',
+    answer:
+      'As web engineers, we have spent our entire careers becoming experts in development, design, UX, and SEO. We know what it takes to make a website great, performant, and search engine friendly. Your focus is your business. We sweat the small tech stuff so you can focus on building your brand without losing hours to rigid page builders.',
+  },
+  {
+    question: 'Why should I care about performance?',
+    answer:
+      "Studies show that the longer a website takes to load, the more likely you are to lose a potential customer. Google considers a website's performance among the top factors it uses when page ranking the website on a user's search, affecting where it is placed in the search results.",
+  },
+  {
+    question: "Can I change the website's content?",
+    answer:
+      "Yes! Need some titles changed or a new picture added to show off your work? We're just an email away. Because our websites are custom-made for your brand and business, we have full autonomy over the content, look, and feel of it. Change anything you want at any time.",
+  },
+];
+---
+
 <div id="cs-wrapper-1411">
   <section id="reviews-1411">
     <div class="cs-container">
@@ -57,56 +84,21 @@
         <h2 class="cs-title">Frequently Asked Questions</h2>
         <ul class="cs-faq-group">
           <!-- Active class added as default -->
-          <li class="cs-faq-item" x-data="{ expanded: false }">
-            <button class="cs-button" @click="expanded = !expanded">
-              <span class="cs-button-text">
-                Can I change where I want my donation to go?
-              </span>
-            </button>
-            <p class="py-4" x-show="expanded" x-collapse>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-              convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
-              diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
-              enim, magna urna, quam.
-            </p>
-          </li>
-          <li class="cs-faq-item">
-            <button class="cs-button">
-              <span class="cs-button-text">
-                Where does my transaction processing fee go?
-              </span>
-            </button>
-            <p class="cs-item-p">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-              convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
-              diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
-              enim, magna urna, quam.
-            </p>
-          </li>
-          <li class="cs-faq-item">
-            <button class="cs-button">
-              <span class="cs-button-text"> How can I receive a refund? </span>
-            </button>
-            <p class="cs-item-p">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-              convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
-              diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
-              enim, magna urna, quam.
-            </p>
-          </li>
-          <li class="cs-faq-item">
-            <button class="cs-button">
-              <span class="cs-button-text">
-                Is my credit card information secure?
-              </span>
-            </button>
-            <p class="cs-item-p">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit
-              convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin
-              diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta
-              enim, magna urna, quam.
-            </p>
-          </li>
+          {
+            questions.map(({ question, answer, extendedAnswer }) => (
+              <li class="cs-faq-item" x-data="{ expanded: false }">
+                <button class="cs-button" @click="expanded = !expanded">
+                  <span class="cs-button-text">{question}</span>
+                </button>
+                <p class="py-4 text-white" x-show="expanded" x-collapse>
+                  {answer}
+                </p>
+                <p class="py-4 text-white" x-show="expanded" x-collapse>
+                  {extendedAnswer}
+                </p>
+              </li>
+            ))
+          }
         </ul>
       </div>
     </div>
