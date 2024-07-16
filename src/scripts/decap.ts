@@ -1,11 +1,12 @@
 function initializeDecap() {
+  // @ts-expect-error ID will be defined
   if (window.netlifyIdentity) {
-    window
-      .netlifyIdentity
-      .on('init', (user) => {
+    // @ts-expect-error ID will be defined
+    window.netlifyIdentity
+      .on('init', (user: any) => {
         if (!user) {
-          window
-            .netlifyIdentity
+          // @ts-expect-error ID will be defined
+          window.netlifyIdentity
             .on('login', () => {
               document.location.href = '/admin/';
             });
