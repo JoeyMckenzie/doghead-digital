@@ -80,13 +80,40 @@ function getActiveClass(route: string) {
           <li class="cs-li">
             <a href="/about" class={getActiveClass('about')}> About </a>
           </li>
-          <li class="cs-li">
-            <a href="/services" class={getActiveClass('services')}>
+          <li
+            class="cs-li cs-dropdown"
+            :class="submenuExpanded && 'cs-active'"
+            tabindex="0"
+            x-data="{ submenuExpanded: false }"
+          >
+            <span
+              class={getActiveClass('pricing')}
+              @click="submenuExpanded = !submenuExpanded"
+            >
               Services
-            </a>
+              <Icon class="cs-drop-icon" size={15} name="mdi:chevron-down" />
+            </span>
+            <ul class="cs-drop-ul">
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link"
+                  >Web Design & Development</a
+                >
+              </li>
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Performance & SEO</a>
+              </li>
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link"
+                  >Domain Hosting & Support</a
+                >
+              </li>
+              <li class="cs-drop-li">
+                <a href="" class="cs-li-link cs-drop-link">Copywriting</a>
+              </li>
+            </ul>
           </li>
           <li class="cs-li">
-            <a href="/services" class={getActiveClass('services')}> Pricing </a>
+            <a href="/services" class={getActiveClass('pricing')}> Pricing </a>
           </li>
           <li class="cs-li">
             <a href="/contact" class={getActiveClass('contact')}> Contact </a>
