@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 const questions = [
   {
     question: 'Why not just use Wix, Squarespace, or Wordpress?',
@@ -34,19 +36,14 @@ const questions = [
       </div>
       <div class="cs-flex">
         <div class="cs-item">
-          <!--Blue Quote-->
-          <img
-            class="cs-quote"
-            aria-hidden="true"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/pink-quotes.svg"
-            decoding="async"
-            alt="quote icon"
-            width="120"
-            height="99"
+          <Icon
+            size={48}
+            class="cs-quote text-neutral-300 dark:text-neutral-700"
+            name="fontisto:quote-left"
           />
           <p class="cs-item-text">
-            When you think about collecting customer feed back, it's easy to get
-            overwhelmed by the sheer volume of . With so many more customers and
+            When you think about collecting customer feedback, it's easy to get
+            overwhelmed by the sheer volume of. With so many more customers and
             so many ways to connect with their feedback it's hard to know to
             where to start.
           </p>

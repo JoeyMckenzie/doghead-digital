@@ -9,6 +9,13 @@ document.addEventListener('alpine:init', () => {
     expanded: false,
     toggle() {
       this.on = !this.on;
+
+      if (this.on) {
+        document.documentElement.classList.add('dark');
+      }
+      else {
+        document.documentElement.classList.remove('dark');
+      }
     },
     getBodyClass() {
       let className = '';

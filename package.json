@@ -25,6 +25,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/ubuntu": "^5.0.13",
     "@iconify-json/cil": "^1.1.8",
+    "@iconify-json/fontisto": "^1.1.8",
     "@iconify-json/ic": "^1.1.17",
     "@iconify-json/icon-park-outline": "^1.1.15",
     "@iconify-json/material-symbols": "^1.1.84",
