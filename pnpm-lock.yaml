@@ -92,7 +92,16 @@ importers:
       tsparticles-engine:
         specifier: ^2.12.0
         version: 2.12.0
+      tsparticles-preset-fire:
+        specifier: ^2.12.0
+        version: 2.12.0
       tsparticles-preset-links:
+        specifier: ^2.12.0
+        version: 2.12.0
+      tsparticles-preset-stars:
+        specifier: ^2.12.0
+        version: 2.12.0
+      tsparticles-preset-triangles:
         specifier: ^2.12.0
         version: 2.12.0
       typescript:
@@ -4082,9 +4091,21 @@ packages:
     resolution: {integrity: sha512-fbskYnaXWXivBh9KFReVCfqHdhbNQSK2T+fq2qcGEWpwtDdgujcaS1k2Q/xjZnWNMfVesik4IrqspcL51gNdSA==}
     deprecated: starting from tsparticles v3 the packages are now moved to @tsparticles/package-name instead of tsparticles-package-name
 
+  tsparticles-preset-fire@2.12.0:
+    resolution: {integrity: sha512-gzpbnUcIBXoDPwtwRd44xvj1LDNs2poSC10S0SoFhwxkPjv4iPr4P428KcUgubZJ/pvIHVFIcjlb85cgRsIEFA==}
+    deprecated: '@tsparticles/preset-fire is the new package, please use that'
+
   tsparticles-preset-links@2.12.0:
     resolution: {integrity: sha512-ZWr4oDUVt+166lEmgjNCzysOXmyYAMH2ZD9dGIbqxamXK2TRt1/2JOj4edExiA3Qjml1zIu8TJ24yGRFF+FFMA==}
     deprecated: '@tsparticles/preset-links is the new package, please use that'
+
+  tsparticles-preset-stars@2.12.0:
+    resolution: {integrity: sha512-/v/lK5nx0jBi6GE+gQrI2+G8Q83+gAFxTyj+sdQLQ9d8TCrkzgFnW4Ko415GEA7lUYq9xcoDUkfIG+IPRDEwgA==}
+    deprecated: '@tsparticles/preset-stars is the new package, please use that'
+
+  tsparticles-preset-triangles@2.12.0:
+    resolution: {integrity: sha512-Wuvoq9R7YRXyQRj65vVcqha95gUMFq0RHOrCK5nBaOoQpnlODMDBBhs4DTVd/E9lKZFgTwd0nAoRjo41+GvEAA==}
+    deprecated: '@tsparticles/preset-triangles is the new package, please use that'
 
   tsparticles-shape-circle@2.12.0:
     resolution: {integrity: sha512-L6OngbAlbadG7b783x16ns3+SZ7i0SSB66M8xGa5/k+YcY7zm8zG0uPt1Hd+xQDR2aNA3RngVM10O23/Lwk65Q==}
@@ -9218,7 +9239,24 @@ snapshots:
     dependencies:
       tsparticles-engine: 2.12.0
 
+  tsparticles-preset-fire@2.12.0:
+    dependencies:
+      tsparticles-basic: 2.12.0
+      tsparticles-engine: 2.12.0
+      tsparticles-interaction-external-push: 2.12.0
+
   tsparticles-preset-links@2.12.0:
+    dependencies:
+      tsparticles-basic: 2.12.0
+      tsparticles-engine: 2.12.0
+      tsparticles-interaction-particles-links: 2.12.0
+
+  tsparticles-preset-stars@2.12.0:
+    dependencies:
+      tsparticles-basic: 2.12.0
+      tsparticles-engine: 2.12.0
+
+  tsparticles-preset-triangles@2.12.0:
     dependencies:
       tsparticles-basic: 2.12.0
       tsparticles-engine: 2.12.0

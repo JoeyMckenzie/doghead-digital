@@ -1,32 +1,6 @@
 ---
-import spaceBackground from '~/assets/images/space.webp';
+import spaceBackground from '~/assets/images/pairing.svg';
 import { Image } from 'astro:assets';
-import Particles from 'astro-particles';
-import type { ISourceOptions } from 'tsparticles-engine';
-
-const options: ISourceOptions = {
-  preset: 'links',
-  fullScreen: {
-    zIndex: -2,
-    enable: false,
-  },
-  interactivity: {
-    events: {
-      onhover: {
-        enable: true,
-        mode: 'repulse',
-      },
-    },
-  },
-  particles: {
-    number: {
-      value: 30,
-    },
-    move: {
-      enable: true,
-    },
-  },
-};
 ---
 
 <section id="sbsr-599">
@@ -49,7 +23,7 @@ const options: ISourceOptions = {
       <span class="cs-topper">Who We Are</span>
       <h2 class="cs-title">Professional Developers Obsessed with Perfection</h2>
       <p class="cs-text">
-        At Doghead Digital, we live and breath software development. From
+        At Doghead Digital, we live and breathe software development. From
         marketing and brochure websites to custom applications powering entire
         enterprise businesses, we've had a hand in engineering software at all
         scales.
@@ -62,157 +36,156 @@ const options: ISourceOptions = {
       <a href="/contact" class="cs-button-solid">Let's Talk!</a>
     </div>
   </div>
-</section>
 
-<style lang="scss">
-  /* Mobile - 360px */
-  @media only screen and (width >= 0) {
-    #sbsr-599 {
-      position: relative;
-
-      .cs-container {
-        width: 100%;
-        max-width: calc(1280 / 16 * 1rem);
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        /* 48px - 64px */
-        gap: clamp(3rem, 6vw, 4rem);
-      }
-
-      .cs-content {
-        /* set text align to left if content needs to be left aligned */
-        text-align: left;
-        width: 100%;
-        max-width: calc(522 / 16 * 1rem);
-
-        /* moved section padding to cs-content so the cs-background can be full width */
-        padding: var(--sectionPadding);
-
-        /* prevents padding and border from affecting height and width */
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-
-        /* centers content horizontally, set to flex-start to left align */
-        align-items: flex-start;
-      }
-
-      .cs-text {
-        margin-bottom: calc(16 / 16 * 1rem);
-
-        &:last-of-type {
-          margin-bottom: calc(32 / 16 * 1rem);
-        }
-      }
-
-      .cs-button-solid {
-        font-size: calc(16 / 16 * 1rem);
-
-        /* 46px - 56px */
-        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-        text-decoration: none;
-        font-weight: 700;
-        text-align: center;
-        margin: 0;
-        color: #fff;
-        min-width: calc(150 / 16 * 1rem);
-        padding: 0 calc(24 / 16 * 1rem);
-        background-color: var(--primary);
-        border-radius: calc(4 / 16 * 1rem);
-        display: inline-block;
+  <style lang="scss">
+    /* Mobile - 360px */
+    @media only screen and (width >= 0) {
+      #sbsr-599 {
         position: relative;
-        z-index: 1;
 
-        /* prevents padding from adding to the width */
-        box-sizing: border-box;
+        .cs-container {
+          width: 100%;
+          max-width: calc(1280 / 16 * 1rem);
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
 
-        &::before {
-          content: '';
-          position: absolute;
-          height: 100%;
-          width: 0%;
-          background: #000;
-          opacity: 1;
-          top: 0;
-          left: 0;
-          z-index: -1;
-          border-radius: calc(4 / 16 * 1rem);
-          transition: width 0.3s;
+          /* 48px - 64px */
+          gap: clamp(3rem, 6vw, 4rem);
         }
 
-        &:hover {
+        .cs-content {
+          /* set text align to left if content needs to be left aligned */
+          text-align: left;
+          width: 100%;
+          max-width: calc(522 / 16 * 1rem);
+
+          /* moved section padding to cs-content so the cs-background can be full width */
+          padding: var(--sectionPadding);
+
+          /* prevents padding and border from affecting height and width */
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+
+          /* centers content horizontally, set to flex-start to left align */
+          align-items: flex-start;
+        }
+
+        .cs-text {
+          margin-bottom: calc(16 / 16 * 1rem);
+
+          &:last-of-type {
+            margin-bottom: calc(32 / 16 * 1rem);
+          }
+        }
+
+        .cs-button-solid {
+          font-size: calc(16 / 16 * 1rem);
+
+          /* 46px - 56px */
+          line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+          text-decoration: none;
+          font-weight: 700;
+          text-align: center;
+          margin: 0;
+          color: #fff;
+          min-width: calc(150 / 16 * 1rem);
+          padding: 0 calc(24 / 16 * 1rem);
+          background-color: var(--primary);
+          border-radius: calc(4 / 16 * 1rem);
+          display: inline-block;
+          position: relative;
+          z-index: 1;
+
+          /* prevents padding from adding to the width */
+          box-sizing: border-box;
+
           &::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 0%;
+            background: #000;
+            opacity: 1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            border-radius: calc(4 / 16 * 1rem);
+            transition: width 0.3s;
+          }
+
+          &:hover {
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+
+        .cs-background {
+          display: block;
+          position: relative;
+          width: 100%;
+          height: calc(256 / 16 * 1rem);
+          z-index: 1;
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
             width: 100%;
+            object-fit: cover;
+            border-radius: 4rem 0 0 4rem;
           }
         }
       }
+    }
 
-      .cs-background {
-        display: block;
-        position: relative;
-        width: 100%;
-        height: calc(256 / 16 * 1rem);
-        z-index: 1;
+    /* Tablet - 768px */
+    @media only screen and (width >= 48rem) {
+      #sbsr-599 {
+        /* 90px - 150px */
 
-        img {
-          padding-left: 0.25em;
+        /* returned section padding to the section container, this Stitch has 1.5X padding top and bottom than the normal Stitch */
+        padding: clamp(5.625rem, 9vw, 9.375rem) calc(16 / 16 * 1rem);
+
+        .cs-container {
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+
+        .cs-background {
+          width: 50%;
+          height: auto;
           position: absolute;
           top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          border-radius: 4rem 0 0 4rem;
+          bottom: 0;
+          left: 50%;
+        }
+
+        .cs-content {
+          width: 45%;
+          padding: 0;
         }
       }
     }
-  }
 
-  /* Tablet - 768px */
-  @media only screen and (width >= 48rem) {
-    #sbsr-599 {
-      /* 90px - 150px */
+    /* Dark Mode */
+    @media only screen and (width >= 0) {
+      body.dark-mode {
+        #sbsr-599 {
+          .cs-title,
+          .cs-text {
+            color: var(--bodyTextColorWhite);
+          }
 
-      /* returned section padding to the section container, this Stitch has 1.5X padding top and bottom than the normal Stitch */
-      padding: clamp(5.625rem, 9vw, 9.375rem) calc(16 / 16 * 1rem);
-
-      .cs-container {
-        flex-direction: row;
-        justify-content: flex-start;
-      }
-
-      .cs-background {
-        width: 50%;
-        height: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-      }
-
-      .cs-content {
-        width: 45%;
-        padding: 0;
-      }
-    }
-  }
-
-  /* Dark Mode */
-  @media only screen and (width >= 0) {
-    body.dark-mode {
-      #sbsr-599 {
-        .cs-title,
-        .cs-text {
-          color: var(--bodyTextColorWhite);
-        }
-
-        .cs-text {
-          opacity: 0.8;
+          .cs-text {
+            opacity: 0.8;
+          }
         }
       }
     }
-  }
-</style>
+  </style>
+</section>

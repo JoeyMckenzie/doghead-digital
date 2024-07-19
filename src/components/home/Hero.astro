@@ -46,25 +46,9 @@ const options: ISourceOptions = {
       class="cs-background"
       id="tsparticles"
       options={options}
-      init="particlesInit"
+      init="particlesInitForHero"
     />
   </div>
-
-  <!-- Background Image, there's a background image in the CSS for the parallax
-  effect you'll need to change as well if you swap out our images -->
-  <!-- <picture class="cs-background">
-    <source media="(max-width: 600px)" srcset={background.src} />
-    <source media="(min-width: 601px)" srcset={background.src} />
-    <Image
-      decoding="async"
-      src={background}
-      alt="restaurant"
-      aria-hidden="true"
-      width="2250"
-      height="1500"
-    />
-    <div id="tsparticles"></div>
-  </picture> -->
 </section>
 
 <style lang="scss">
