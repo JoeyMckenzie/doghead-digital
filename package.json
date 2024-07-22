@@ -20,7 +20,7 @@
     "@alpinejs/collapse": "^3.14.1",
     "@alpinejs/persist": "^3.14.1",
     "@astrojs/alpinejs": "^0.4.0",
-    "@astrojs/check": "^0.8.0",
+    "@astrojs/check": "^0.8.2",
     "@astrojs/sitemap": "^3.1.6",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/ubuntu": "^5.0.13",
